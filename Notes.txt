@@ -1,0 +1,10 @@
+==> Inheritence
+
+    Multiple inheritance is not supported in Java through class.
+
+
+==> Polymorphism:-
+    
+    > Method Overloading
+
+    In Java, Method Overloading is not possible by changing the return type of the method only.
