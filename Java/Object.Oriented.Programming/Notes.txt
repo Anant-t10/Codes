@@ -1,0 +1,40 @@
+==> static
+    We can apply static keyword with variables, methods, blocks and nested classes. 
+    The static keyword belongs to the class than an instance of the class.
+    
+    The static can be:
+        Variable (also known as a class variable)
+        Method (also known as a class method)
+        Block
+        Nested class
+
+    Without static:
+        class Student{                  //Example of code without static keyword
+            int rollno;  
+            String name;  
+            String college="ITS";  
+        }  
+    
+    A static method can access static data member and can change the value of it.
+
+    a static block is a special block of code that runs when the class is loaded into the 
+    memory by the Java Virtual Machine (JVM). These static blocks are also known as static initializers.
+
+    "this" can be passed as an argument in the method call.
+    "this" can be used to refer current class instance variable.
+
+==> Inheritence
+
+    Multiple inheritance is not supported in Java through class.
+
+
+==> Polymorphism:-
+    
+    > Method Overloading
+
+        In Java, Method Overloading is not possible by changing the return type of the method only.
+        There are two ways to overload the method in java:-
+            By changing number of arguments
+            By changing the data type
+        Compile Time Error is better than Run Time Error. 
+        So, java compiler renders compiler time error if you declare the same method having same parameters.
