@@ -1,0 +1,63 @@
+Some Points:-
+
+>>>>>Can we start a thread twice? No. After starting a thread, it can never be started again. 
+    If you does so, an IllegalThreadStateException is thrown. 
+    In such case, thread will run once but for second time, it will throw exception.
+
+>>>>>At least one process is required for each thread.
+    At a time one thread is executed only.
+
+>>>>>When you call the run() method directly instead of using the start() method to execute a thread, 
+    the run() method will be executed as a normal method call in the same thread context, 
+    without creating a new thread. This means that the tasks will not be executed concurrently; 
+    instead, they will run sequentially in the order you call the run() methods.
+
+>>>>>Each thread has a priority. Priorities are represented by a number between 1 and 10.
+    Note that not only JVM a Java programmer can also assign the priorities of a thread explicitly in a Java program.
+
+>>>>>It provides services to user threads for background supporting tasks. 
+    It has no role in life than to serve user threads.
+    Its life depends on user threads.
+    It is a low priority thread.
+
+>>>>>In java, garbage means unreferenced objects. 
+    Garbage Collection is process of reclaiming the runtime unused memory automatically. 
+    In other words, it is a way to destroy the unused objects.
+
+>>>>>How can an object be unreferenced?
+There are many ways:
+    By nulling the reference
+    By assigning a reference to another
+    By anonymous object etc.
+
+>>>>>The Garbage collector of JVM collects only those objects that are created by new keyword. 
+    So if you have created any object without new, 
+    you can use finalize method to perform cleanup processing (destroying remaining objects).
+
+>>>>>Garbage collection is performed by a daemon thread called Garbage Collector(GC). 
+    This thread calls the finalize() method before object is garbage collected.
+
+>>>>>inter-thread communication in Java is a mechanism that allows threads to communicate and synchronize their actions
+     to avoid conflicts and ensure data consistency. It is essential when multiple threads are working on shared resources, 
+     and there's a need to coordinate their activities. Java provides three methods for inter-thread communication: 
+     wait(), notify(), and notifyAll(), which are available in the Object class.
+
+    wait(): This method causes the current thread to wait until another thread invokes the notify() or notifyAll() methods for 
+            the same object. When a thread calls wait(), it releases the lock on the object it's currently synchronized on and 
+            enters a waiting state until it's notified by another thread. It is commonly used inside a loop with a condition 
+            to avoid spurious wake-ups.
+
+    notify(): This method wakes up a single thread that is waiting on the same object. If multiple threads are waiting, 
+            it is not guaranteed which one will be awakened. The awakened thread will continue its execution after the 
+            synchronized block in which it called wait() completes.
+
+    notifyAll(): This method wakes up all threads that are waiting on the same object. After being awakened, each thread will 
+            compete for the lock before it can continue its execution. It is generally used when multiple threads need to be 
+            notified simultaneously.
+
+>>>>>Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+    Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+
+>>>>>If you declare any method as synchronized, it is known as synchronized method. Synchronized method is used to lock an 
+    object for any shared resource. When a thread invokes a synchronized method, it automatically acquires the lock for that object 
+    and releases it when the thread completes its task.

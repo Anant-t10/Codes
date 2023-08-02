@@ -1,0 +1,44 @@
+Notes: 
+
+--> an exception is an event that disrupts the normal flow of the program. 
+    It is an object which is thrown at runtime.Exception Handling is a mechanism to 
+    handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+
+--> Types of exception:-
+    1) Checked Exception {IOException, SQLException}
+    The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. Checked exceptions are checked at compile-time.
+    .
+    .
+    2) Unchecked Exception {ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, NumberFormatException}
+    The classes that inherit the RuntimeException are known as unchecked exceptions. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+    .
+    .
+    3) Error
+    Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+--> keywords:-
+    try -   The "try" keyword is used to specify a block where we should place an exception code. It means we can't
+            use try block alone. The try block must be followed by either catch or finally.
+    catch -	The "catch" block is used to handle the exception. It must be preceded by try block which means we
+            can't use catch block alone. It can be followed by finally block later.
+    finally- The "finally" block is used to execute the necessary code of the program. It is executed whether an 
+            exception is handled or not.
+    throw-	The "throw" keyword is used to throw an exception.
+    throws-	The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in
+            the method. It doesn't throw an exception. It is always used with method signature.
+
+--> Java finally block is always executed whether an exception is handled or not. Therefore, it contains all the    
+    necessary statements that need to be printed regardless of the exception occurs or not. The finally block 
+    follows the try-catch block.
+    finally block in Java can be used to put "cleanup" code such as closing a file, closing connection, etc.
+    The important statements to be printed can be placed in the finally block.
+
+-->If you don't handle the exception, before terminating the program, JVM executes finally block (if any).
+
+-->For each try block there can be zero or more catch blocks, but only one finally block.
+
+-->The finally block will not be executed if the program exits (either by calling System.exit() or by causing a
+    fatal error that causes the process to abort).
+
+
+
