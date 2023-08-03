@@ -1,0 +1,53 @@
+====================================>> Collections Framework <<==================================================
+
+==> The Collection is a framework that provides an architecture to store and manipulate the group of objects.
+    Java Collections can achieve all the operations that you perform on a data such as searching, sorting, 
+    insertion, manipulation, and deletion.
+
+    Interfaces and Classe: 
+                Iterable                                            ---- Extends
+                |--> List ==>{ArrayList, LinkedList, vector}        ==== Implements
+                |--> Set  ==>{HashSet, LinkedHashSet} 
+                |         ---> SortedSet ====>{TreeSet}
+                |--> Queue --> Deque ==>{ArrayQueue}
+
+==> Collection Methods
+
+    -->boolean add(E element)                           boolean removeAll(Collection<?> c)
+    boolean remove(Object o)                            boolean retainAll(Collection<?> c)
+    boolean contains(Object o)                          Object[] toArray()
+    public boolean containsAll(Collection<?> c)
+    int size()
+    boolean isEmpty()
+
+==> Iterator Interfaces
+
+    Iterator interface provides the facility of iterating the elements in a forward direction only.
+    There are only three methods in the Iterator Interface:-
+        public boolean hasNext() -	It returns true if the iterator has more elements otherwise it returns false.
+        public Object next()	 -  It returns the element and moves the cursor pointer to the next element.
+        public void remove()	 -  It removes the last elements returned by the iterator. It is less used.
+
+        Iterator<Integer> roll= al.iterator();          // Creating Iterator Object which holds Integer type obj
+        while(roll.hasNext()){               
+            int toPrint= roll.next();                   //using hasNext()
+            System.out.print(toPrint+ " ");
+            if(toPrint==0){
+                roll.remove();                         //using remove() method
+            }
+       }    
+
+==> ArrayList
+
+    Java ArrayList class uses a dynamic array for storing the elements.
+    The ArrayList in Java can have the duplicate elements also.
+    Java ArrayList class maintains insertion order.
+    Java ArrayList allows random access because the array works on an index basis. 
+    It is like an array, but there is no size limit. 
+    We can add or remove elements anytime. 
+    So, it is much more flexible than the traditional array. 
+    It is found in the java.util package.
+    We can not create an array list of the primitive types, such as int, float, char, etc. 
+    It is required to use the required wrapper class in such cases. 
+
+    By ListIterator interface, we can iterate the ArrayList in reverse order.
