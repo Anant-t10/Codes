@@ -72,3 +72,64 @@
         offerLast(E element):   Adds the specified element to the end of the list, returning true if successful.
         removeFirstOccurence("e"):      Remove first occurrence of element from the list  
         removeLastOccurence("e"):       Remove last occurrence of element from the list  
+
+==> ArrayList VS LinkedList
+
+    uses:           ArrayList used *(dynamic array).    LinkedList uses *(doubly LinkedList)
+    
+    manipulation:   ArrayList=Difficult                 LinkedList= Easy  
+
+    Random Access:  ArrayList= Easy                     LinkedList= difficult
+
+    storing:        contigous                           non-contigous
+
+    capacity:       10-default (then, no fix)           no fixed capacity
+
+    uses:           just storage and acess.             when more manipulations are needed
+
+==> HashSet <NOT GENERIC, NO NEED TO SPECIFY GENERIC TYPE>
+
+    Java HashSet class is used to create a collection that uses a hash table for storage. 
+    It inherits the AbstractSet class and implements Set interface.
+    HashSet stores the elements by using a mechanism called hashing.
+    HashSet contains unique elements only.
+    HashSet allows null value.
+    HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+    HashSet is the best approach for search operations.
+    The initial default capacity of HashSet is 16, and the load factor is 0.75.
+
+    {{{{{Hashing}}}}}
+        Hashing is a fundamental technique to convert data of arbitrary size into a 
+            fixed-size value (usually a hash code or hash value) of a fixed length. 
+        This process is called "hashing," and the resulting value is referred to as the "hash."
+        The primary purpose of hashing is to efficiently index and retrieve data in large datasets or databases. 
+        Hashing provides a way to create a unique representation of data.
+
+    {{{{{Hash Table}}}}}
+        A hash table, also known as a hash map, is a data structure that provides efficients data retrieval and storage. 
+        It is based on the concept of hashing, where data is mapped to unique indices or keys in an array. 
+        Used in Dictionaries and databases: To store key-value pairs for efficient lookups and updates and,
+            Caches: To store frequently accessed data for fast retrieval.
+    
+    {{{{{Load Factor}}}}}
+        The load factor is a metric used to measure the fullness or occupancy of a data structure, 
+            particularly in the context of hash tables.
+            Load Factor = Number of elements / Capacity 
+        A load factor of 1 means the hash table is completely full, while a load factor of 0 means it is empty. 
+        maintain a load factor that is neither too high nor too low to achieve a good balance between 
+        space efficiency and performance.
+        Commonly used load factor values in hash tables are 0.75
+
+    Contructors:
+                                    HashSet()       construct a default HashSet.
+                        HashSet(int capacity)	    initialize the capacity of the hash set to the given integer value capacity. 
+                                                    The capacity grows automatically as elements are added to the HashSet.
+        HashSet(int capacity, float loadFactor)     initialize the capacity of the hash set to the given integer value capacity 
+                                                    and the specified load factor.
+                            
+==> LinkedHashSet
+
+    Java LinkedHashSet class is a Hashtable and Linked list implementation of the Set interface. 
+    It inherits the HashSet class and implements the Set interface.
+    Java LinkedHashSet class maintains <<<<<insertion order>>>>>.
+    
