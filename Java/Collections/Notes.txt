@@ -16,7 +16,7 @@
     -->boolean add(E element)                           boolean removeAll(Collection<?> c)
     boolean remove(Object o)                            boolean retainAll(Collection<?> c)
     boolean contains(Object o)                          Object[] toArray()
-    public boolean containsAll(Collection<?> c)
+    public boolean containsAll(Collection<?> c)         clear()
     int size()
     boolean isEmpty()
 
@@ -37,7 +37,7 @@
             }
        }    
 
-==> ArrayList
+==> ArrayList               
 
     Java ArrayList class uses a dynamic array for storing the elements.
     The ArrayList in Java can have the duplicate elements also.
@@ -51,3 +51,24 @@
     It is required to use the required wrapper class in such cases. 
 
     By ListIterator interface, we can iterate the ArrayList in reverse order.
+
+==> LinkedList
+
+    Java LinkedList class uses a doubly linked list to store the elements. 
+    It provides a linked-list data structure. 
+    It inherits the AbstractList class and implements List and Deque interfaces.
+    Java LinkedList class is non synchronized.
+    In Java LinkedList class, manipulation is fast because no shifting needs to occur.
+
+    Here are some of the most commonly used methods explicitly available in the LinkedList class:
+
+        addFirst(E element):    Adds the specified element to the beginning of the list.
+        addLast(E element):     Adds the specified element to the end of the list.
+        removeFirst():          Removes and returns the first element in the list.
+        removeLast():           Removes and returns the last element in the list.
+        getFirst():             Returns the first element in the list without removing it.
+        getLast():              Returns the last element in the list without removing it.
+        offerFirst(E element):  Adds the specified element to the beginning of the list, returning true if successful.
+        offerLast(E element):   Adds the specified element to the end of the list, returning true if successful.
+        removeFirstOccurence("e"):      Remove first occurrence of element from the list  
+        removeLastOccurence("e"):       Remove last occurrence of element from the list  
