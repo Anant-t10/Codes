@@ -16,7 +16,7 @@ public class HashMapExample {
         Set set= hm.entrySet();                     //converting the Map into Set so that we can traverse
 
         Iterator roll= set.iterator();
-        while(roll.hasNext()){
+        while(roll.hasNext()){                                  //Map.Entry is an Interface
             Map.Entry entry= (Map.Entry) roll.next();//<converted Object type into Map.Entry type to get Key and Value Seperately>
             System.out.println(entry.getKey()+" "+entry.getValue());
         }

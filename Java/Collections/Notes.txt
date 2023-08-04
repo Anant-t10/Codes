@@ -150,4 +150,37 @@
     A Map doesn't allow duplicate keys, but you can have duplicate values.
     HashMap and LinkedHashMap allow null keys and values.
     A Map can't be traversed, so you need to convert it into Set using keySet() or entrySet() method.
+
+    hm.EntrySet()       entry.getValue()    hm.containsKey()    
+    entry.getKey()      hm.put()            hm.containsValue()
+    hm.replace()        hm.remove()         hm.get(key)
+
+==> Queue
+
+    It is used to keep the elements that are processed in the First In First Out (FIFO) manner. 
+    It is an ordered list of objects, where insertion of elements occurs at the end of the list, 
+        and removal of elements occur at the beginning of the list.
     
+    boolean add(object)	    It is used to insert the specified element into this queue and return true upon success.
+    boolean offer(object)	It is used to insert the specified element into this queue.
+    Object remove()	        It is used to retrieves and removes the head of this queue.
+    Object poll()	        It is used to retrieves and removes the head of this queue, or returns null if this queue is empty.
+    Object element()	    It is used to retrieves, but does not remove, the head of this queue.
+    Object peek()	        It is used to retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+
+==> Priority Queue
+
+    PriorityQueue is class defined in the collection framework that gives us a way for processing the objects on the basis of priority.
+    sometimes the elements of the queue are needed to be processed according to the priority, that's where a PriorityQueue comes into action.
+
+    q.add()     Object remove()      Object peek()    Object poll() -head      Object element() -head(but not removes)
+
+==> Deque
+
+    The interface called Deque is present in java.util package. It is the subtype of the interface queue. 
+    The Deque supports the addition as well as the removal of elements from both ends of the data structure.      
+    A deque can be used as a stack or a queue. 
+    Unlike Queue, we can add or remove elements from both sides.
+    Null elements are not allowed in the ArrayDeque.
+    ArrayDeque has no capacity restrictions.
+    ArrayDeque is faster than LinkedList and Stack.
